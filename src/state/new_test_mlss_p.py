@@ -83,6 +83,8 @@ class MlssCaliP:
         self.sub_out_state = str(out_state)
         for i in range(WATER_LINE):
             ## 输入状态文件复制到对应的输出状态文件，输入状态文件为随机状态文件
+            print(self.sub_in_state.format(i + 1))
+            print(self.sub_out_state.format(i + 1))
             shutil.copy(src=self.sub_in_state.format(i + 1), dst=self.sub_out_state.format(i + 1))
         self.inf_args = inf_args
 
